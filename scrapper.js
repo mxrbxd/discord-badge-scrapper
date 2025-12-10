@@ -37,7 +37,6 @@ client.on('ready', async () => {
 
     const colors = [chalk.red, chalk.green, chalk.yellow, chalk.blue, chalk.magenta, chalk.cyan];
 
-    // 10'ar sunucu grupları halinde paralel tara
     const batchSize = 10;
     const allResults = [];
 
@@ -102,7 +101,6 @@ client.on('ready', async () => {
         process.exit(0);
     }
 
-    // Embed için chunk'ları oluştur (her embed description max 4096 karakter)
     let currentChunk = '';
     let chunks = [];
     
@@ -116,7 +114,6 @@ client.on('ready', async () => {
     }
     if (currentChunk) chunks.push(currentChunk);
 
-    // Embed'leri paralel olarak gönder (5'erli gruplar halinde)
     console.log(chalk.cyan(`📤 ${chunks.length} embed gönderiliyor...`));
 
     for (let i = 0; i < chunks.length; i += 5) {
