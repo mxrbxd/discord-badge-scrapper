@@ -12,7 +12,7 @@ const axios = require('axios');
 const chalk = require('chalk');
 
 const TOKEN = '';
-const SERVER_IDS = ['']; // Birden fazla server ID ekleyebilirsiniz
+const SERVER_IDS = ['']; // Birden fazla server ID ekleyebilirsiniz.
 const WEBHOOK_URL = '';
 
 const BADGE_EMOJIS = { 
